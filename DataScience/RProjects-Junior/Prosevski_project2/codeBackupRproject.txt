@@ -1,0 +1,42 @@
+cat(rep("\n", 50))
+# The program does 9 tasks from the list: Selects row and column, reshaping, 
+# changing column type, creates a function that performs computation, 
+# visualization, counting, based on sampled data.
+# Author: Dimitrije Prosevski
+# Date: March 3th, 2019
+
+#load data
+myData = read.csv("C:\\Users\\Dico LT\\Desktop\\googleplaystore.csv", header=TRUE)
+
+#2. Select column & Reshaping Data by transposing the column
+columnNum = which(colnames(myData)== "Rating")
+selectC <- t((myData[c(columnNum)]))
+
+#1. Select row for "Flybook" app
+selectR <- (myData[171,])
+
+#5. Change column types
+getRatings = myData[,columnNum] <- as.numeric(as.character(myData[,columnNum]))
+getRatings[is.nan(getRatings)] = 0
+
+#3. 6. 11. & 13. Make a function, perform computation, visualization, counting
+doCalculations <- function(x){
+	#find avearage, median, min, max
+	avg = mean(x)
+	med = median(x)
+	min = min(x)
+	max = max(x)
+	print("Stats for sample data of 100 random Google Play Store app ratings:")
+	print(paste0("Average rating: ", avg))
+	print(paste0("Median rating: ", med))
+	print(paste0("Minimum rating: ", min))
+	print(paste0("Maximum rating: ", max))
+	count <- table(x)
+	plot(count, main = "Plot frequency vs rating",
+		xlab = "Rating", ylab = "Frequency")
+}
+
+#12. Sampling
+n = 100
+sampleData = sample(getRatings, n, replace = FALSE, prob = NULL)
+doCalculations(sampleData)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+ Filename: game1.html
+ Written by: Dimitrije Prosevski (DP)
+ Purpose: HTML5 Game
+-->
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+   	<title>Test your memory</title>
+    <link rel="stylesheet" href="css/gameCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+	
+<body class="island1">
+
+	<div class="boldBlack">
+		<p>Difficulties:<br>3 digits - easy<br>6 digits - medium<br>9 digits - hard<br></p>
+	</div>
+	<h3 class="captain" id="captain1"></h3><br>
+	<input class="button" id="start" type="button" align="center" value="Ready"/><br>
+	<p class="captain" id="promptNums" hidden></p>
+	<p class="captain" id="captain2" hidden>It is time to check your numbers!</p>
+	<input class="button" id="check" type="button" hidden value="Captain: use your memory!"/><br>
+	<input class="button" id="input" type="text" placeholder="Write the numbers here" hidden/><br>
+	<input class="button" id="verify" type="button" hidden value="Verify"/>
+
+	<br><br><br><br>
+	<input class="next" id="secondGame" type="button" hidden onclick="location.href='game2.html';" value="Challenge 2!"/><br><br>
+	<input type="button" onclick="location.href='game.html';" value="Game Reset"/>
+
+	<!--scripts-->
+	<script src="gameJS1.js"></script>
+</body>
+</html>

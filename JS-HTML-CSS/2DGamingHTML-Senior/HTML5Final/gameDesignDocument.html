@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+ Filename: final.html
+ Written by: Dimitrije Prosevski (DP)
+ Purpose: HTML5 final
+-->
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+   	<title>Final Game Design Document</title>
+    <link rel="stylesheet" href="css/graphics.css">
+</head>
+	
+<body>
+
+<h1>Final Game Design Document</h1>
+
+<p>
+The goal of the game is to collect as many coins as possible before lava gets in the way. Speed and the starting position of the lava varies depending on the difficulty chosen before starting the game.
+<br>Each coin is a Sprite object, and each Sprite is part of the Canvas scene. Sprites are born at the top of the canvas (max y coordinate), and "randomly generated" x coordinate. A sprite dies (coin gets colleted) by chaning it's location above canvas (hidden).
+Each coin is created with certain set interval, and the coins are timed in that way that as the game goes on the number of dummy coins will increase. (dummy coins = coins that move or appear like they hit the lava, but they dissapear right before that happens; in other words deceiving the player).
+<br>Lava grows with constant grow rate (easy difficulty = 0.2 pixels per frame) until it reaches the point of y = addLimit px (where addLimit = 150 px from the top of canvas). It stops growing there and the only way to retract is to get the required amount of coins to be colleted.
+<br>Game stops if allowed number of coin misses is reached.
+<br>Variables that vary with difficulty: (from Easy, to Medium, to Hard)
+<br>&nbsp;&nbsp;&nbsp;-grow rate of the lava (increases)
+<br>&nbsp;&nbsp;&nbsp;-starting position of the lava (increases)
+<br>&nbsp;&nbsp;&nbsp;-required number of coins to retract (increases)
+<br>&nbsp;&nbsp;&nbsp;-retract the lava (decreases)
+<br><br><h3>Software Engineering Plan</h3>
+I had no team, the project was done by me. The project was created from the scratch, aiding myself with Simple Game Engine.
+<br>To go to the game click on the link at the bottom left.
+</p>
+
+<br><br>
+<h3>Finite Automata</h3>
+<img src="finite.png" alt="Finite Automata">
+
+<br><br><br><br><br><br><br>
+<a href="final.html">Final Project Link</a>
+
+</body>
+</html>

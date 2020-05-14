@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1555041120 source:c:\users\dico lt\desktop\project3\main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<cstdlib>
+	<sstream>
+	<vector>
+	<ctime>
+	<time.h>
+	<chrono>
+

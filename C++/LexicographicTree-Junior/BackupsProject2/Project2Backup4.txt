@@ -1,0 +1,132 @@
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <cstdlib>
+#include <sstream>
+using namespace std;
+
+void swaps(string *str1, string *str2)
+{
+    string temp = *str1;
+    *str1 = *str2;
+    *str2 = temp;
+}
+
+int main() {
+    ifstream inFile;
+    inFile.open("test2.txt");
+    string line;
+    int fileWordCount = 0;
+    int lineCount = 0;
+
+    if(inFile.is_open()) {
+        //separates files by lines
+        while(getline(inFile, line)){
+            //separate lines by words
+            stringstream ss(line);
+            /*if(line == "#"){
+                break; //break if hashtag
+            }*/
+            while(getline(ss, line, ' ')){
+                if(line.substr(line.length()-1,line.length()) == "." || line.substr(line.length()-1,line.length()) == ","){
+                    line = line.substr(0,line.length()-1);
+                }
+                fileWordCount++;
+            }
+            lineCount++;
+        }
+    }
+    inFile.close();
+
+////////////////////////////////////////////////////////////////////////////////////
+    int lineNum = lineCount;
+    int wordNum = fileWordCount;
+    int limit = 10;
+    string lineArray[lineNum];
+    string storeWord[wordNum];
+    int trackWordLine[wordNum][wordNum];
+    lineCount = 0;
+
+    ifstream reOpenFile;
+    reOpenFile.open("test2.txt");
+    if (reOpenFile.is_open()) {
+        int i = 0;
+        while(getline(reOpenFile, line)){ //separate by new lines
+            lineArray[lineCount] = line; //store new lines into array
+            stringstream ss(line);
+            /*if(line == "#"){
+                break; //break if hashtag
+            }*/
+            while(getline(ss, line, ' ')){
+                if(line.substr(line.length()-1,line.length()) == "." || line.substr(line.length()-1,line.length()) == ","){
+                    line = line.substr(0,line.length()-1);
+                }
+                storeWord[i] = line.substr(0, limit); //store words into array and limit to 10
+                i++;
+            }
+            lineCount++;
+        }
+    }
+
+    //print file in the text
+    cout << "Text:" << endl;
+    for (int i = 0; i < lineNum; i++) {
+        cout<<lineArray[i]<<endl;
+    }
+
+    //find all the number of repeats of the words
+    for (int i = 0; i < lineNum; i++) {
+        for (int j = 0 ; j < wordNum; j++) {
+            trackWordLine[i][j] = 0;
+            if (lineArray[i].find(storeWord[j]) != std::string::npos) {
+                trackWordLine[i][j] = i+1; //show line number
+            }
+            else{
+                trackWordLine[i][j] = 0;
+            }
+        }
+        cout<<endl;
+    }
+
+    for (int j = 0; j < wordNum; j++) {
+        cout << setw(limit) << storeWord[j] << " ";
+        //remove duplicates
+        /*for (int n = 0; n < wordNum; n++) {
+            if(!storeWord[j].compare(storeWord[n])){
+                j++;
+            }
+        }*/
+        //print matrix
+        for (int i = 0; i < lineNum; i++) {
+            if(trackWordLine[i][j] != 0){
+                cout << setw(limit) << trackWordLine[i][j];
+            }
+        }cout<<endl;
+    }cout<<endl;
+
+
+
+    /*for (int j = 0; j < wordNum; j++) {
+    cout<<endl;
+        for (int i = 0; i < lineNum; i++) {
+            cout << trackWordLine[i][j];
+        }
+    }*/
+
+
+    //swapping
+    /*int minVal = 0;
+    for (int i = 0; i < wordNum-1; i++) {
+    minVal = i;
+    for (int j = i+1; j < wordNum; j++)
+        if (storeWord[j].substr(0,1) < storeWord[minVal].substr(0,1))
+            minVal = j;
+            swaps(&storeWord[minVal], &storeWord[i]);
+    }*/
+
+    cout << string(20, '\n');
+    reOpenFile.close();
+    system("pause");
+    return 0;
+}

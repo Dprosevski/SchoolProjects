@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--
+ Filename: satellite.html
+ Written by: Dimitrije Prosevski (DP)
+ Purpose: satellite Validation for the satellite project
+ Date: 20 Dec 2018
+ Modification History:
+ Original Build
+-->
+<!--Tested in Google Chrome, Firefox and Internet Explorer. -->
+<!--In Internet Explorer "Submit" button is renamed to "Submit Query".
+	Everything else looks/works the same.-->
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+   	<title>Satellite Simulator</title>
+   	<link href="../theme/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/satellite.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   	<script src="../validation/dist/jquery.validate.js"></script>	
+</head>
+	
+	
+<body>
+
+	<img  src="css/satellite.jpg" height="50" width="60" alt="satelliteLogo" style="float:left">
+	<header>
+		<p class="hdr">Satellite Simulator<br>
+		By Dimitrije Prosevski</p>
+		<br><br>
+	</header>
+
+	<img src="css/cover.jpg" alt="Cover" class="center">
+	<h3>Welcome to Satellite Simulator!</h3>
+
+		<div id="tabs" class="tabs"><!--TABS-->
+			<ul>
+				<li><a href="#tab1">Simualator</a></li>
+				<li><a href="#tab2">Contact us</a></li>
+			</ul>
+
+			<div id="tab1"><!--TAB 1-->
+				<form id="formcalc" name="formcalcN"><!--Form for calculations-->
+
+				<label>Choose a planet:</label><br>
+				&nbsp;&nbsp;&nbsp;<input class="ssp" id="radio1" type="radio" value="Mercury" name="planets" checked autofocus>Mercury<br>
+				&nbsp;&nbsp;&nbsp;<input class="ssp" id="radio2" type="radio" value="Venus" name="planets">Venus<br>
+				&nbsp;&nbsp;&nbsp;<input class="ssp" id="radio3" type="radio" value="Earth" name="planets">Earth<br>
+				&nbsp;&nbsp;&nbsp;<input class="ssp" id="radio4" type="radio" value="Mars" name="planets">Mars<br>
+				&nbsp;&nbsp;&nbsp;<input class="ssp" id="radio5" type="radio" value="Jupiter" name="planets">Jupiter<br>
+				&nbsp;&nbsp;&nbsp;<input class="ssp" id="radio6" type="radio" value="Saturn" name="planets">Saturn<br>
+				&nbsp;&nbsp;&nbsp;<input class="ssp" id="radio7" type="radio" value="Uranus" name="planets">Uranus<br>
+				&nbsp;&nbsp;&nbsp;<input class="ssp" id="radio8" type="radio" value="Neptune" name="planets">Neptune<br>
+				&nbsp;&nbsp;&nbsp;<input id="radio9" type="radio" value="Planetx" name="planets">Planet X<br>
+
+				<div>
+					<img  src="css/Mercury.jpg" class="mySlides" style="width:20%" alt="MercuryImg" id="rad1">
+					<img  src="css/Venus.jpg" class="mySlides" style="width:20%" alt="VenusImg">
+					<img  src="css/Earth.jpg" class="mySlides" style="width:20%" alt="EarthImg">
+					<img  src="css/Mars.jpg" class="mySlides" style="width:20%" alt="MarsImg">
+					<img  src="css/Jupiter.jpg" class="mySlides" style="width:20%" alt="JupiterImg">
+					<img  src="css/Saturn.jpg" class="mySlides" style="width:20%" alt="SaturnImg">
+					<img  src="css/Uranus.jpg" class="mySlides" style="width:20%" alt="UranusImg">
+					<img  src="css/Neptune.jpg" class="mySlides" style="width:20%" alt="NeptuneImg">
+					<img  src="css/PlanetX.jpg" class="mySlides" style="width:20%" alt="PlanetXImg">
+
+				    <button id="leftArrow" class="arrows" onclick="plusDivs(-1)">&#10094;</button>
+				    <label>||||||||||||||||||||||||||||||||</label>
+				    <button class="arrows" onclick="plusDivs(1)">&#10095;</button>
+				</div>
+
+				<script>
+					var slideIndex = 1;
+					var i;
+					var x = document.getElementsByClassName("mySlides");
+					showDivs(slideIndex);
+					//slideshow functions
+					function plusDivs(n) {
+					  showDivs(slideIndex += n);
+					}
+
+					function showDivs(n) {
+						if (n > x.length) {slideIndex = 1}
+						if (n < 1) {slideIndex = x.length}
+						for (i = 0; i < x.length; i++) {
+							x[i].style.display = "none";  
+						}
+						x[slideIndex-1].style.display = "block";
+					}
+				</script>
+
+
+				<br><label for="mass">Currently our least massive object in space is 259kg, and most massive 419,455kg.
+				<br>Mass of the satellite (kg): (range specified in the box)<br></label>
+				<input name="massN" type="number" id="mass" placeholder="100kg - 1e+6"/><br>
+
+				<br><label for="alt">Currently, the lowest altitude satellite in space 242,000 meters, and the highest altitude 1,500,000,000m.
+				<br>Altitude of the satellite (m):<br></label>
+				<input name="altN" type="number" id="alt" placeholder="1e+5 - 2e+9"/><br>
+
+				<br><label class="toggleThis" for="nameX"> 
+				Name your planet:<br></label>
+				<input class="toggleThis" name="nameNX" type="text" id="nameX" placeholder="Name"/><br>
+
+				<br><label class="toggleThis" for="gX">
+				Sun's gravity equals to 274 m/s<sup>2</sup>. <br>Gravity of the planet (m/s<sup>2</sup>):<br></label>
+				<input class="toggleThis" name="gXN" type="number" id="gX" placeholder="0 - 500"/><br>
+
+				<br><label class="toggleThis" for="rX">
+				Out of all objects in the Solar system, the one with the smallest radius is dwarf planet Ceres = 455000 m, and with largest is Sun = 695,700,000 m. <br>Radius of the planet (m):<br></label>
+				<input class="toggleThis" name="rXN" type="number" id="rX" placeholder="1e+5 - 1e+10"/><br>
+
+				<br><label class="toggleThis" for="MX">
+				The one with the smallest mass is dwarf planet Ceres = 9.39e+20 kg, and with largest is Sun = 1.99e+30 kg.
+				<br>Mass of the planet (kg):<br></label>
+				<input class="toggleThis" name="MXN" type="number" id="MX" placeholder="1e+10 - 1e+40"/><br>
+
+				<br><label class="toggleThis" for="TX">
+				The one with the lowest average temperature is Uranus = -224 &#x2103;, and with highest is Sun = 5,505 &#x2103;.
+				<br>Average temperature of the planet (&#x2103;):<br></label><!--Celsius Unicode--> 
+				<input class="toggleThis" name="TXN" type="number" id="TX" placeholder="-250 - 6000"/><br><br><br>
+
+				&nbsp;&nbsp;&nbsp;<input type="submit" id="submit1"	class="buttons">
+				</form><!--end form for calculations-->
+			</div>
+
+			<div id="tab2"><!--TAB 2-->
+				<form id="formpers" name="formpersN"><!--Form for personal-->
+
+					<label for="first">*First Name:&nbsp;</label>
+					<input name="firstN" 	type="text" 	id="first"   	placeholder="John" /><br>
+
+					<label for="middle">Middle Name:</label>
+					<input name="middleN" 	type="text" 	id="middle"  	placeholder="Jr."/><br>
+
+					<label for="last">*Last Name:&nbsp;</label>
+					<input name="lastN" 	type="text" 	id="last"  		placeholder="Smith"/><br>
+
+					<label for="phone">*Telephone:</label>
+					<input name="phoneN" 	type="tel" 		id="phone"  	placeholder="317-XXX-XXXX"/><br>
+
+					<label for="email">*Email:</label>
+					<input name="emailN" 	type="email" 	id="email"  	placeholder="Jsmith@domain.com"/><br>
+
+					<label for="username">*Username:</label>
+					<input name="usernameN" type="text" 	id="username" 	placeholder="Jsmith"  /><br>
+
+					<label for="password">*Password:</label>
+					<input name="passwordN" type="password" id="password" 	placeholder="******"/><br>
+
+					<label for="datepicker">Pick a date to schedule a phone call:</label>
+					&nbsp;&nbsp;&nbsp;<input type="text" id="datepicker" name="dateN"/>
+						
+					<label for="grade"><br>Grade your understanding from 1-10:</label>
+					&nbsp;&nbsp;&nbsp;<input type="text" id="grade" readonly/><br>
+					&nbsp;&nbsp;&nbsp;<div id="slider"></div>
+					<br><br><br><br>
+					&nbsp;&nbsp;&nbsp;<input type="reset"  id="reset2"  	class="buttons"/>
+					&nbsp;&nbsp;&nbsp;<input type="submit" id="submit2" 	class="buttons"/>
+				</form>
+			</div>
+
+	    </div><!--end of tabs-->
+		<br><br><br><br>
+
+	<div id="outputcalc">
+		<label for="calculations" class="list"></label>
+		<output id="calculations" class="sublist"></output><br>
+	</div>
+
+	<div id="outputpers">
+		<!--validation-->
+		<label for="validation" class="list"></label>
+		<output id="validation" class="sublist"></output><br>
+
+		<!--output personal info-->
+		<label for="personal" class="list"></label>
+		<output id="personal" class="sublist"></output><br>
+	</div><br><br><br><br>
+
+	<a class="footer" href="../project.html">Project Page</a>
+	<br><br><br><br><br><br>
+
+	<!--scripts-->
+	<script src="../theme/jquery-ui.min.js"></script>
+	<script src="satellite.js"></script>
+	<script src="jQuerySatellite.js"></script>
+	<script src="validationSatellite.js"></script>
+</body>
+</html>

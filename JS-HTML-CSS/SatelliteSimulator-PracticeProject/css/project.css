@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+/**************************************
+ Filename: finalproject.css
+ Author: Dimitrije Prosevski
+ Date: 20 Dec 2018
+ Purpose: Provide colors for project.html
+ Modification History:
+ Original Build
+**************************************/
+
+body{
+	background-image: url("universe.jpeg");
+	height: 1100px;
+}
+
+ul{
+	color: darkblue;
+}
+
+.hdr{
+	color: white;
+	font-size: 20px;
+	min-height: 50px;
+}
+
+.footer{ 
+    position: fixed;     
+    text-align: center;    
+    bottom: 0px;
+    font-size: 18px;
+	color : white;
+}  
+
+#bigdiv{
+	width: auto;
+	margin: 0 auto;
+	box-shadow: 0 2px 15px #EEE;
+	height: auto;
+	padding: 15px;
+	border-radius: 15px;
+	background-color: white;
+}
+
+.list{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	color : darkblue;
+}
+
+.sublist{
+	width: auto;
+	padding: 5px;
+	border : 2px solid blue;
+	border-radius: 10px;
+	background-color: blue;
+	color: white;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

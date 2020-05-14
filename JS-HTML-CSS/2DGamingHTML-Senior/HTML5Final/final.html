@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+ Filename: final.html
+ Written by: Dimitrije Prosevski (DP)
+ Purpose: HTML5 final
+-->
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+	   	<title>Coin Collect</title>
+	   	<link href="theme/jquery-ui.css" rel="stylesheet">
+	    <link rel="stylesheet" href="css/final.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+	</head>
+		
+	<body>
+		<div>
+			<form>
+				&nbsp;&nbsp;&nbsp;<input class="radios" id="radio1" type="radio" value="Easy" name="diff" checked autofocus>Easy<br>
+				&nbsp;&nbsp;&nbsp;<input class="radios" id="radio2" type="radio" value="Medium" name="diff">Medium<br>
+				&nbsp;&nbsp;&nbsp;<input class="radios" id="radio3" type="radio" value="Hard" name="diff">Hard<br>
+			</form>
+		</div>
+		<button id="submit" onClick="init()">Start Game</button>
+		<button onClick="window.location.reload();">Restart Game</button>
+		<button id="clear">Clear Record History</button>
+	    <div id="output"></div>
+	    <div id="blue" hidden></div>&nbsp;&nbsp;&nbsp;<div id="red" hidden></div><br>
+
+	    <script src="theme/jquery-ui.min.js"></script>
+	    <script src="final.js"></script>
+	</body>
+</html>

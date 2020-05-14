@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+/**************************************
+ Filename: funspec.css
+ Author: Dimitrije Prosevski
+ Date: 20 Dec 2018
+ Purpose: Provide colors for funspec.html
+ Modification History:
+ Original Build
+**************************************/
+
+body{
+	background-image: url("universe.jpeg");
+	height: 1100px;
+}
+
+ul{
+	color: darkblue;
+}
+
+.hdr{
+	color: white;
+	font-size: 20px;
+}
+
+.footer{ 
+    position: fixed;     
+    text-align: center;    
+    bottom: 0px;
+    font-size: 18px;
+	color : white;
+}  
+
+.list{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	color : white;
+}
+
+.sublist{
+	width: auto;
+	padding: 5px;
+	border : 2px solid blue;
+	border-radius: 10px;
+	background-color: white;
+	color: blue;
+	font-size: 15px;
+}
+
+.ordered{
+	color: blue;
+	font-size: 14px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   	border : 2px solid blue;
+    border-radius: 10px;
+    width: 50%;
+}

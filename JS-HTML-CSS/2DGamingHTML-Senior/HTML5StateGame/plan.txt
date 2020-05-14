@@ -1,0 +1,5 @@
+description, your ship broke and pirates found you, captain of pirates offers 2 games to test your memory
+guess his random number
+get the 6 digit number or higher
+both states can outcome to game over, repeat?
+or congrats you survived, repeat?

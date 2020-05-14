@@ -1,0 +1,11 @@
+﻿  OpTable.cpp
+  Source.cpp
+c:\users\dico lt\desktop\dico\college\iupui\semesters\semester 2\systems programming 30000\project300\source.cpp(178): warning C4553: '==': result of expression not used; did you intend '='?
+c:\users\dico lt\desktop\dico\college\iupui\semesters\semester 2\systems programming 30000\project300\source.cpp(336): warning C4018: '<': signed/unsigned mismatch
+c:\users\dico lt\desktop\dico\college\iupui\semesters\semester 2\systems programming 30000\project300\source.cpp(390): warning C4018: '<=': signed/unsigned mismatch
+c:\users\dico lt\desktop\dico\college\iupui\semesters\semester 2\systems programming 30000\project300\source.cpp(428): warning C4018: '<': signed/unsigned mismatch
+c:\users\dico lt\desktop\dico\college\iupui\semesters\semester 2\systems programming 30000\project300\source.cpp(500): warning C4018: '<': signed/unsigned mismatch
+c:\users\dico lt\desktop\dico\college\iupui\semesters\semester 2\systems programming 30000\project300\source.cpp(572): warning C4018: '<': signed/unsigned mismatch
+  EachLine.cpp
+  Generating Code...
+  Project300.vcxproj -> C:\Users\Dico LT\Desktop\Dico\College\IUPUI\Semesters\Semester 2\Systems Programming 30000\Project300\Debug\Project300.exe

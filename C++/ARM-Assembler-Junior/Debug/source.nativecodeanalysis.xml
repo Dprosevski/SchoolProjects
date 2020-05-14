@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\dico lt\source\repos\project300\project300</FILEPATH>
+      <FILENAME>eachline.h</FILENAME>
+      <LINE>15</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'EachLine::format' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>EachLine::{ctor}</FUNCTION>
+    <DECORATED>??0EachLine@@QAE@XZ</DECORATED>
+    <FUNCLINE>15</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\dico lt\source\repos\project300\project300</FILEPATH>
+      <FILENAME>progblocks.h</FILENAME>
+      <LINE>13</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'ProgBlock::number' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>ProgBlock::{ctor}</FUNCTION>
+    <DECORATED>??0ProgBlock@@QAE@XZ</DECORATED>
+    <FUNCLINE>13</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

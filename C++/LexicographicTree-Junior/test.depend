@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1553056422 source:c:\users\dico lt\desktop\project2_362\btree.cpp
+	<cstdlib>
+	<iomanip>
+	<iostream>
+	<string>
+	<fstream>
+	"bTree.h"
+	"linkedList.h"
+
+1553054303 c:\users\dico lt\desktop\project2_362\btree.h
+	<cstdlib>
+	<iostream>
+	<string>
+	<fstream>
+	"linkedList.h"
+
+1553056422 c:\users\dico lt\desktop\project2_362\linkedlist.h
+	<fstream>
+
+1553056422 source:c:\users\dico lt\desktop\project2_362\linkedlist.cpp
+	"linkedList.h"
+	<cstdlib>
+	<iostream>
+	<fstream>
+	"bTree.h"
+
+1553056422 source:c:\users\dico lt\desktop\project2_362\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string>
+	<cstdlib>
+	<sstream>
+	"bTree.h"
+	"linkedList.h"
+
+1553056422 source:c:\users\dico lt\desktop\semester 2\data structures 36200\project2_362\btree.cpp
+	<cstdlib>
+	<iomanip>
+	<iostream>
+	<string>
+	<fstream>
+	"bTree.h"
+	"linkedList.h"
+
+1553054303 c:\users\dico lt\desktop\semester 2\data structures 36200\project2_362\btree.h
+	<cstdlib>
+	<iostream>
+	<string>
+	<fstream>
+	"linkedList.h"
+
+1553056422 c:\users\dico lt\desktop\semester 2\data structures 36200\project2_362\linkedlist.h
+	<fstream>
+
+1553056422 source:c:\users\dico lt\desktop\semester 2\data structures 36200\project2_362\linkedlist.cpp
+	"linkedList.h"
+	<cstdlib>
+	<iostream>
+	<fstream>
+	"bTree.h"
+
+1553109750 source:c:\users\dico lt\desktop\semester 2\data structures 36200\project2_362\main.cpp
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string>
+	<cstdlib>
+	<sstream>
+	"bTree.h"
+	"linkedList.h"
+

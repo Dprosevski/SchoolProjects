@@ -1,0 +1,9 @@
+rideNumber,hackLicense,firstName,lastName,pickUpLoc,latitude,longitude
+1,HL45,John           ,Doe                           ,107,40.735519,-73.984079
+2,HL45,John           ,Doe                           ,144,40.777048,-73.967596
+3,HL53,Bill           ,Green                         ,7,40.772015,-73.930267
+4,HL63,Kevi           ,White                         ,142,40.772319,-73.984401
+5,HL77,Jane           ,Smith                         ,107,40.735519,-73.984079
+6,HL78,Sam            ,Dough                         ,3,40.853551,-73.874979
+7,HL83,Mike           ,Adams                         ,107,40.735519,-73.984079
+8,HL25,Dimi           ,Pros                          ,32,40.850656,-73.866524

@@ -1,0 +1,82 @@
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <cstdlib>
+#include <vector>
+#include <sstream>
+using namespace std;
+
+int main() {
+    string storeWord[12];
+    ifstream inFile;
+    string line;
+    inFile.open("test.txt");
+    int wordCount[12];
+    string lineArray[5];
+    int lineNum = 0;
+    int trackWordLine[11][11];
+    int limit = 10;
+
+    if (inFile.is_open()) {
+        int i = 0;
+        while(getline(inFile, line)){
+            lineArray[lineNum] = line;
+            stringstream ss(line);
+            while(getline(ss, line, ' ')){
+                if(line.substr(line.length()-1,line.length()) == "."){
+                    line = line.substr(0,line.length()-1);
+                }
+                storeWord[i] = line.substr(0, limit);
+                i++;
+            }
+            lineNum++;
+        }
+    }
+
+
+    cout << "Text:" << endl;
+    for (int i = 0; i < 4; i++) {
+        cout<<lineArray[i]<<endl;
+    }
+
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0 ; j < 11; j++) {
+            trackWordLine[i][j] = 0;
+            if (lineArray[i].find(storeWord[j]) != std::string::npos) {
+                trackWordLine[i][j] = i+1; //show line number
+            }
+            else{
+                trackWordLine[i][j] = 0;
+            }
+        }
+        cout<<endl;
+    }
+
+
+
+    for (int j = 0; j < 11; j++) {
+        cout << setw(10) << storeWord[j] << " ";
+        //remove duplicates
+        /*for (int n = 0; n < 11; n++) {
+            if(!storeWord[j].compare(storeWord[n])){
+                j++;
+            }
+        }*/
+        //print matrix
+        for (int i = 0; i < 4; i++) {
+            if(trackWordLine[i][j] != 0){
+                cout << setw(limit) << trackWordLine[i][j];
+            }
+        }
+      cout<<endl;
+   }
+   cout<<endl;
+
+
+
+
+    inFile.close();
+    system("pause");
+    return 0;
+}

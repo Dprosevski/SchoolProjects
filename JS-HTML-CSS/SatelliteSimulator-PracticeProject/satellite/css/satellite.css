@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+/**************************************
+ Filename: satellite.css
+ Author: Dimitrije Prosevski
+ Date: 20 Dec 2018
+ Purpose: Provide colors for satellite.html
+ Modification History:
+ Original Build
+**************************************/
+
+body{
+	background-image: url("universe.jpeg");
+	height: 1100px;
+}
+
+ul{
+	color: darkblue;
+}
+
+h1,h3{
+    text-align: center;  
+	color: white;
+}
+
+h2,h4,h5{
+	color: white;
+}
+
+h6{
+	color: lightblue;
+}
+
+#labelPlanet{
+	display: inline-block;
+	float: left;
+}
+
+#images{
+	display: inline-block;
+	float: left;
+}
+
+.hdr{
+	color: white;
+	font-size: 20px;
+	min-height: 100px;
+}
+
+.footer{ 
+    position: fixed;     
+    text-align: center;    
+    bottom: 0px;
+    font-size: 18px;
+	color : white;
+}  
+
+.list{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+	color : white;
+}
+
+.sublist{
+	font-size: 18px;
+	text-align: left;
+	color : white;
+}
+
+.ordered{
+	color: white;
+	font-size: 16px;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   	border : 2px solid darkblue;
+    border-radius: 10px;
+    width: 30%;
+}
+
+#outputcalc{
+	float: left;
+  	display: inline;
+	background-color: black;
+	width: 620px;
+   	border: 2px solid darkblue;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  	padding-left: 15px;
+  	padding-right: 15px;
+  }
+
+#outputpers{
+	float: left;
+  	display: inline;
+	background-color: black;
+	width: 620px;
+   	border: 2px solid darkblue;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  	padding-left: 15px;
+  	padding-right: 15px;
+}
+
+.validate{
+	font-weight: bold;
+}
+
+.mySlides {
+	display: none;
+}
+
+.arrows{
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+#slider{
+	margin-left: 370px;
+	width: 250px;
+}
+
+#datepicker{
+	width: 110px;
+	margin-left: 4px;
+}
+
+#grade{
+	width: 40px;
+}
+
+#first, #last{
+	margin-left: 7px;
+}
+
+#phone{
+	width: 160px;
+	margin-left: 17px;
+}
+
+#email{
+	margin-left: 61px;
+}
+
+#username{
+	margin-left: 17px;
+}
+
+#password{
+	margin-left: 22px;
+	width: 160px;
+}

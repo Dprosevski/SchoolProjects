@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV</title>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style>
+body { background-color:#fafafa; font-family:'Roboto';}
+h1 { margin:150px auto 30px auto;}
+</style>
+</head>
+
+<body>
+<h1 class="text-center">DEV Status</h1>
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="easyNotify.js"></script>
+
+<script>
+var myImg = 'https://avatars2.githubusercontent.com/u/6137660?s=200&v=4';
+var currentStatus;
+var previousStatus;
+var myTitle = "DEV status:";
+var time = Math.floor(Date.now());
+
+
+function checkdevStatus() {
+  $.get("status?cb=" + Math.floor(Date.now()), function(data){
+    console.log('data; ', data);
+    currentStatus = data;
+    promptIfChanged();
+  });
+}
+
+
+function promptIfChanged() {
+  if (previousStatus != currentStatus) {doPrompt();}
+}
+
+
+function doPrompt() { 
+  var options = {
+  title: myTitle,
+    options: {
+      body: currentStatus,
+      icon: myImg,
+      lang: 'en-US',
+      timestamp: time,
+      onClick: function() {window.location.href='https://app-dev.edmeplus.net/';}      
+    }
+  };
+  console.log(options);
+  $("#easyNotify").easyNotify(options);
+
+  previousStatus = currentStatus;
+}
+
+
+window.setInterval(checkdevStatus, 5000);
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+/**************************************
+ Filename: gameCSS.css
+ Author: Dimitrije Prosevski
+ Purpose: Provide colors for game.html
+ **************/
+
+.island1 {
+	background-image: url("island.png");
+	height: 600px;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.island2 {
+	background-image: url("island2.png");
+	height: 600px;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.island3 {
+	background-image: url("island3.png");
+	height: 600px;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.boldBlack{
+	color: black;
+	font-family:Impact, Charcoal, sans-serif;
+	font-size:20px;
+	background-color: white;
+	font-weight: bold;
+	border : 4px solid black;
+	padding: 2px; 
+	width: 25vw;
+}
+
+.smallBlack{
+	color: black;
+	font-family:Impact, Charcoal, sans-serif;
+	font-size:15px;
+	background-color: white;
+	border : 4px solid black;
+	padding: 2px; 
+	width: 25vw;
+}
+
+.captain{
+	background-color: #ff9999;
+	font-size:20px;
+	font-weight: bold;
+	border : 4px solid red;
+	padding: 2px; 
+	width: 25vw;
+}
+
+.pirate{
+	background-color: #99c2ff;
+	font-size:20px;
+	font-weight: bold;
+	border : 4px solid blue;
+	padding: 2px; 
+	width: 25vw;	
+}
+
+.next{
+	font-weight: bold;
+	font-size: 25px;
+	color: blue;
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}

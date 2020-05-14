@@ -1,0 +1,75 @@
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <cstdlib>
+#include <sstream>
+#include "bTree.h"
+#include "linkedList.h"
+
+using namespace std;
+
+int main() {
+    BTree myTree[2];
+    //loop both files
+    int loop = 0;
+    for(loop = 0; loop < 2; loop++){
+    ifstream inFile;
+    string fileName;
+    if (loop == 0){
+        BTree myTree[loop];
+        fileName = "test1.txt";
+    }
+    if (loop == 1){
+        BTree myTree[loop];
+        fileName = "test2.txt";
+    }
+    string line;
+    string word;
+    string storeWord;
+    int lineCount = 0;
+    char temp1;
+    char temp2;
+    int tempInt1;
+    int tempInt2;
+    int limit = 10;
+    ifstream reOpenFile;
+    reOpenFile.open(fileName);
+    if (reOpenFile.is_open()) {
+        cout<<"Text " << loop << ":\n\n";
+        while(getline(reOpenFile, line)){ //separate by new lines
+            stringstream ss(line);
+            char temp1;
+            char temp2;
+            int tempInt1;
+            int tempInt2;
+            cout << "Line " << lineCount+1 << ": " <<line <<endl;
+            while(getline(ss, word, ' ')){
+                //get the first char of the word if its ASCII is within range of signs or numbers make it break
+                temp1 = word[0];
+                tempInt1 = int(temp1);
+                if(tempInt1 > 32 && tempInt1 < 64){
+                    break;
+                }
+                //get the last char of the word if its ASCII is within range of signs or numbers make it break
+                temp2 = word[word.length()-1];
+                tempInt2 = int(temp2);
+                if(tempInt2 > 32 && tempInt2 < 48 || tempInt2 > 57 && tempInt2 < 64){
+                    word = word.substr(0,word.length()-1);
+                }
+                storeWord = word.substr(0, limit); //store words into array and limit to 10
+                myTree[loop].addL(storeWord,lineCount+1);
+            }
+            lineCount++;
+        }
+    }
+
+    cout<<endl;
+    myTree[loop].printT();
+
+    cout << string(10, '\n');
+    reOpenFile.close();
+    } //end of program loop
+    system("pause");
+    return 0;
+}

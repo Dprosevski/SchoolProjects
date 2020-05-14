@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+ Filename: game.html
+ Written by: Dimitrije Prosevski (DP)
+ Purpose: HTML5 Game
+-->
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+   	<title>Luck and logic</title>
+    <link rel="stylesheet" href="css/gameCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+	
+<body class="island1">
+
+	<p class="captain" id="captain"></p>
+	<input id="input" type="text" placeholder="Write your number here"/><br>
+	<input id="verify" type="button" value="Verify"/>
+
+	<input id="welcome" type="button" hidden onclick="location.href='welcome.html';" value="Join the crew"/><br><br>
+	<br><br><br><br><br><br>
+	<input type="button" onclick="location.href='game.html';" value="Game Reset"/>
+
+	<!--scripts-->
+	<script src="gameJS2.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+hide edit program for user
+
+delete reqired field for new password and confirm new pass
+
+approved program manager should be active by default
+
+expand text boxes for website and program descr on add new program and edit program
+
+edit program page: change from submit to edit program button
+
+edit admin: allow change password, add current pass label and tbox 
+(similar to edit profile page)
+
+admin page: remove add new program lbl,tbox, and btn
+
+search page:    add radio btns to before, on date, after
+		add search order
+
+

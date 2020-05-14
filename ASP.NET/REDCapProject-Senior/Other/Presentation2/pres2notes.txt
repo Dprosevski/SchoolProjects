@@ -1,0 +1,11 @@
+fixes
+admin page maintenance options (ordering inputs) 4
+registration page  1 1 1 1 (delete extra TB) Dimitrije
+enter new program, autopostbacks,  3 Paige
+edit new program (correct ordering) 4 Paige
+edit profile (for every type of user) 4 Farhan
+
+
+
+
+
